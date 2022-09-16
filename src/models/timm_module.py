@@ -5,21 +5,7 @@ from pytorch_lightning import LightningModule
 from torchmetrics import MaxMetric, MeanMetric
 from torchmetrics.classification.accuracy import Accuracy
 
-
-class MNISTLitModule(LightningModule):
-    """Example of LightningModule for MNIST classification.
-
-    A LightningModule organizes your PyTorch code into 6 sections:
-        - Computations (init)
-        - Train loop (training_step)
-        - Validation loop (validation_step)
-        - Test loop (test_step)
-        - Prediction Loop (predict_step)
-        - Optimizers and LR Schedulers (configure_optimizers)
-
-    Docs:
-        https://pytorch-lightning.readthedocs.io/en/latest/common/lightning_module.html
-    """
+class TIMMLitModule(LightningModule):
 
     def __init__(
         self,
@@ -125,13 +111,3 @@ class MNISTLitModule(LightningModule):
         return {
             "optimizer": self.hparams.optimizer(params=self.parameters()),
         }
-
-
-if __name__ == "__main__":
-    import hydra
-    import omegaconf
-    import pyrootutils
-
-    root = pyrootutils.setup_root(__file__, pythonpath=True)
-    cfg = omegaconf.OmegaConf.load(root / "configs" / "model" / "mnist.yaml")
-    _ = hydra.utils.instantiate(cfg)
