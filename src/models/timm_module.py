@@ -16,7 +16,7 @@ class TIMMLitModule(LightningModule):
 
         # this line allows to access init params with 'self.hparams' attribute
         # also ensures init params will be stored in ckpt
-        self.save_hyperparameters("hp_metric", ignore=["net"])
+        self.save_hyperparameters(logger=False, ignore=["net"])
 
         self.net = net
 
@@ -68,6 +68,9 @@ class TIMMLitModule(LightningModule):
     def training_epoch_end(self, outputs: List[Any]):
         # `outputs` is a list of dicts returned from `training_step()`
         pass
+
+    def on_train_start(self):
+        self.logger.log_hyperparams(self.hparams, {"val/loss": 0, "val/acc": 0, "hp_metric": 0})
 
     def validation_step(self, batch: Any, batch_idx: int):
         loss, preds, targets = self.step(batch)
