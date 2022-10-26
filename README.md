@@ -3,8 +3,13 @@
 <div align="center">
 
 # EMLOV2
+
+</div>
+
+<div align="center">
+
 ## Session2
-## Docker with Pytorch Lightning Hydra
+#### Docker with Pytorch Lightning Hydra
 
 </div>
 
@@ -55,6 +60,4 @@ python src/train.py trainer.max_epochs=20 datamodule.batch_size=64
 ```
 
 
-<p align="center">
-=== Sesion2 Complete ===
-</p>
+<p align="center"> === Sesion2 Complete === </p>
