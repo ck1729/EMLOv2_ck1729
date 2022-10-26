@@ -8,6 +8,15 @@
 
 <div align="center">
 
+## Session3
+#### Data Version Control and Experiment Tracking
+
+
+</div>
+
+
+<div align="center">
+
 ## Session2
 #### Docker with Pytorch Lightning Hydra
 
