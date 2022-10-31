@@ -34,6 +34,8 @@ Record/Log model various training, validation and test metrices alongwith hyperp
 
 [Google Colab Notebook for Training](https://colab.research.google.com/drive/1ZLpV0CGQWTdhsdTLvs_rJZ4x5ODiZKOc?authuser=1#scrollTo=QBHmU8vAQ2kb)
 
+[TensorBoard Link](https://tensorboard.dev/experiment/2fw6AmexR0GDs8rE31Mvyw/#hparams)
+
 <div align="center">
 
 # Session2
